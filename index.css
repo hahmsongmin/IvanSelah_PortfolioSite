@@ -33,7 +33,7 @@ body {
     100% {transform: rotate(360deg);}
 }
 header {
-    width:92vw;
+    width:100vw;
     padding:6vh 4vw;
     position:fixed;
     font-weight:bold;
@@ -51,35 +51,6 @@ header table {
 #navigation {
     width:80%;
 }
-#magnify {
-    width:100vw;
-    height:100vh;
-    background:rgba(0, 0, 0, 0.92);
-    position:fixed;
-    z-index:4;
-    display:none;
-    flex-direction: column;
-    justify-content:center;
-}
-#magnify h1 {
-    position:absolute;
-    top:0;
-    right:0;
-    margin:20px 40px;
-    color:#fff;
-    transition:0.4s ease-in-out;
-}
-#magnify h1:hover{
-    color:rgb(255, 82, 82);
-    cursor:pointer;
-}
-#img_here {
-    width:90%;
-    height:90%;
-    background-size:contain !important;
-    background-repeat:no-repeat !important;
-    margin:0px auto;
-}
 #logo {
     font-size:40px;
     color:rgb(255, 82, 82);
@@ -88,7 +59,7 @@ header table {
     text-align:right;
 }
 #navigation a {
-    color:black;
+    color:rgb(255, 82, 82);
     font-size: 30px;
     font-weight: bold;
     text-decoration:none;
@@ -98,7 +69,7 @@ header table {
     transition:0.4s ease-in-out;
 }
 #navigation a:hover{
-    border-bottom:2px solid black;
+    border-bottom: 2px solid black;
 }
 #top_part {
     width:100%;
@@ -107,50 +78,46 @@ header table {
 #top_part tr td{
     width:50%;
 }
+
 #about {
     width:84% !important;
-    height:95vh;
+    height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     text-align:left;
-    padding:0px 8%;
+    padding:0px 10%;
 }
 #about h1 {
     font-size:45px;
     word-wrap:break-word;
 }
 #about table {
-    width:70%;
+    width:80%;
     margin-top:4vh;
-}
-#about table tr td {
-    width:20% !important;
-    text-align:left;
 }
 .social {
     display:flex;
     flex-direction: column;
     text-align: center;
     color:rgb(255, 82, 82);
-    font-size: 20px;
+    font-size: 1.3rem;
     padding: 5px 17px;
     margin-bottom: 20px;
-    border-radius:50%;
     background:transparent;
     transition:0.4s ease-in-out;
-    margin:0px 8px;
+
 }
 .social p{
     color :black;
     font-weight:bold;
+    padding-top: 10px;
 }
 .contact_icon{
     color:rgb(255, 82, 82);
     font-size:30px;
     padding:12px 17px;
     margin-bottom: 30px;
-    border-radius:50%;
     background:transparent;
     transition:0.4s ease-in-out;
     margin:0px 8px;
@@ -159,9 +126,7 @@ header table {
 .contact_icon:hover,
 .projects_icon i:hover { 
     cursor: pointer;
-    color:#fff;
-    background:rgb(255, 82, 82);
-    box-shadow:0px 10px 30px rgba(255, 82, 82, 0.8);
+    border-bottom: 1px solid rgb(255, 82, 82);
 }
 .btn_one {
     font-size:18px;
@@ -196,7 +161,7 @@ header table {
 #projects h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 82, 82);
-    width:7%;
+    width:10%;
 }
 #bio {
     width:92vw;
@@ -307,40 +272,14 @@ button:focus {
 }
 
 @media (max-width: 1000px){
-    #photos {
-    columns:1;
-    column-gap:0%;
-    }
-    #photos img {
-        margin:2% 0px;
-    }
-    #photos img:hover {
-        transform: scale(1);
-        cursor: pointer;
-    }
     #rightImage {
         display:none;
     }
-    #top_part {
-        border:0px;
-    }
-    #top_part tr td{
-        width:100%;
-        text-align:center;
-    }
-    #about {
-        width:92% !important;
-        height:75vh;
-        padding-top:20vh !important;
-        text-align:center;
-        padding:0px 4%;
-    }
     #about table {
-        width:100%;
-        margin-top:6vh;
+        display: none;
     }
-    #about table tr td {
-        text-align:center;
+    #about h1 {
+        text-align: center;
     }
     .btn_one {
     padding:6px 30px;
@@ -410,3 +349,13 @@ button:focus {
     margin-bottom: 30px;
     border-radius:50%;
 }
+
+.project-img {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
